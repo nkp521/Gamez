@@ -9,7 +9,6 @@ const Home = ({ games }) => {
   return (
     <div>
       <header>
-        <h1>Welcome to Gamez Central</h1>
         <div className="grid grid-cols-3 gap-4">{renderGames()}</div>
       </header>
     </div>
