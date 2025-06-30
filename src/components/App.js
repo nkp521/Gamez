@@ -5,7 +5,7 @@ import Header from "./Header";
 
 const App = () => {
   const [games, setGames] = useState([]);
-  const [favoritedGame, setFavoritedGame] = useState([]);
+  const [favoritedGames, setFavoritedGames] = useState([]);
 
   useEffect(() => {
     fetch("/embed.json")
@@ -16,19 +16,19 @@ const App = () => {
   }, []);
 
   const handleFavorite = (game) =>
-    setFavoritedGame((prev) =>
+    setFavoritedGames((prev) =>
       prev.some((g) => g.id === game.id)
         ? prev.filter((g) => g.id !== game.id)
         : [...prev, game]
     );
 
-  console.log(favoritedGame);
+  console.log(favoritedGames);
 
   return (
     <>
       <Header />
       <Outlet
-        context={{ games, favoritedGame, setFavoritedGame, handleFavorite }}
+        context={{ games, favoritedGames, setFavoritedGames, handleFavorite }}
       />
     </>
   );

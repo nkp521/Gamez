@@ -1,1 +1,3 @@
 public/embed.json
+node_modules/
+.cache/
