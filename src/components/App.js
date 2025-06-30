@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Outlet } from "react-router-dom";
 import Home from "../pages/Home";
 import Header from "./Header";
 
@@ -18,7 +19,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <Home games={games} />
+      <Outlet context={{ games }} />
     </>
   );
 };
