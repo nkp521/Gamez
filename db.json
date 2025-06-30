@@ -1,0 +1,20 @@
+{
+  "favorites": [
+    {
+      "id": 1,
+      "title": "Apocalypse Truck",
+      "embed": "https://cloud.onlinegames.io/games/2021/1/apocalypse-truck/index-og.html",
+      "image": "https://www.onlinegames.io/media/posts/1015/responsive/apocalypse-truck-xs.jpg",
+      "tags": "1-player,2d,car,crazy,driving,free,racing,truck,zombie",
+      "description": "When the virus hit, cities crumbled, people vanished.  The world went silent except for the groans of the undead.  You’re on…nly hope is a beat-up monster truck, with some spikes, plates, and just enough horsepower to push through the zombie chaos."
+    },
+    {
+      "id": 2,
+      "title": "Kick the Pirate",
+      "embed": "https://cloud.onlinegames.io/games/2022/construct/92/kick-the-pirate/index-og.html",
+      "image": "https://www.onlinegames.io/media/posts/1012/responsive/Kick-The-Pirate-xs.jpg",
+      "tags": "1-player,funny,pirate,cannon,free,physics",
+      "description": "You’re sick of his squawking. Fire this annoying pirate out of a cannon and straight into some karma."
+    }
+  ]
+}
