@@ -10,7 +10,7 @@ const Home = ({ games }) => {
     <div>
       <header>
         <h1>Welcome to Gamez Central</h1>
-        {renderGames()}
+        <div className="grid grid-cols-3 gap-4">{renderGames()}</div>
       </header>
     </div>
   );
