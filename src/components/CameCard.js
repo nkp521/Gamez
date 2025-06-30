@@ -2,24 +2,22 @@ import React, { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 
 const CameCard = ({ game }) => {
-  const { description, embed, image, title } = game;
-  const { showIframe, setShowIframe } = useOutletContext();
+  const { description, embed, image, title, id } = game;
+  const { favoritedGame, handleFavorite } = useOutletContext();
 
   const [showDescription, setShowDescription] = useState(false);
-  const [favoritedGame, setFavoritedGame] = useState(false);
+  const [showIframe, setShowIframe] = useState(false);
 
   const toggleDescription = () => setShowDescription(!showDescription);
   const toggleGame = () => setShowIframe(!showIframe);
-
-  const handleFavorite = () => setFavoritedGame(!favoritedGame);
 
   return (
     <div className="w-[364px] border rounded p-4">
       <p
         className="cursor-pointer text-right w-fit ml-auto"
-        onClick={handleFavorite}
+        onClick={() => handleFavorite(game)}
       >
-        {favoritedGame ? "❤️" : "♡"}
+        {favoritedGame.includes(game) ? "❤️" : "♡"}
       </p>
       <img
         src={image}

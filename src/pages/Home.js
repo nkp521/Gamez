@@ -6,7 +6,7 @@ const Home = () => {
   const { games } = useOutletContext();
 
   const renderGames = () =>
-    games.map((game) => <GameCard key={game.title} game={game} />);
+    games.map((game) => <GameCard key={game.id} game={game} />);
 
   return (
     <div>

@@ -15,10 +15,21 @@ const App = () => {
       });
   }, []);
 
+  const handleFavorite = (game) =>
+    setFavoritedGame((prev) =>
+      prev.some((g) => g.id === game.id)
+        ? prev.filter((g) => g.id !== game.id)
+        : [...prev, game]
+    );
+
+  console.log(favoritedGame);
+
   return (
     <>
       <Header />
-      <Outlet context={{ games, favoritedGame, setFavoritedGame }} />
+      <Outlet
+        context={{ games, favoritedGame, setFavoritedGame, handleFavorite }}
+      />
     </>
   );
 };
