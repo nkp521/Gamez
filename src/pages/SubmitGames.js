@@ -1,7 +1,7 @@
 const SubmitGames = () => {
   return (
     <div>
-      <h1>SubmitGames</h1>
+      <h1>Submit Games</h1>
     </div>
   );
 };

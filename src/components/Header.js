@@ -1,13 +1,12 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <nav className="bg-blue-500 p-4">
-      <div className="flex space-x-4">
-        <h3>Home</h3>
-        <h3>Favorite Games</h3>
-        <h3>Submit Games</h3>
-      </div>
+    <nav className="bg-gray-800 p-4 text-white flex gap-4">
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/favorite-games">Favorite Games</NavLink>
+      <NavLink to="/submit-game">Submit Game</NavLink>
     </nav>
   );
 };
