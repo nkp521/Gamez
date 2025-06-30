@@ -31,6 +31,15 @@ const CameCard = ({ game }) => {
         Game Details
       </button>
       {showDescription && <p className="mt-2">{description}</p>}
+      {showIframe && (
+        <iframe
+          src={embed}
+          width="100%"
+          height="200"
+          allowFullScreen
+          className="mt-2"
+        />
+      )}
     </div>
   );
 };
