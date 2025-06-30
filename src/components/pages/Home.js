@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Header";
+import Header from "../Header";
 
 const Home = () => {
   // api="https://www.onlinegames.io/media/plugins/genGames/embed.json"
