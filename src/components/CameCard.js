@@ -8,8 +8,6 @@ const CameCard = ({ game }) => {
   const toggleDescription = () => setShowDescription(!showDescription);
   const toggleGame = () => setShowIframe(!showIframe);
 
-  console.log(showIframe, game);
-
   return (
     <div className="w-[364px] border rounded p-4">
       <img
@@ -32,13 +30,19 @@ const CameCard = ({ game }) => {
       </button>
       {showDescription && <p className="mt-2">{description}</p>}
       {showIframe && (
-        <iframe
-          src={embed}
-          width="100%"
-          height="200"
-          allowFullScreen
-          className="mt-2"
-        />
+        <div className="fixed top-10 left-1/2 -translate-x-1/2 w-[80vw] h-[80vh] z-50 bg-white border rounded shadow-lg flex flex-col">
+          <iframe
+            src={embed}
+            className="w-full h-full rounded-t"
+            allowFullScreen
+          />
+          <button
+            className="bg-red-500 text-white text-sm px-3 py-2 rounded-b hover:bg-red-600 transition"
+            onClick={toggleGame}
+          >
+            Close Game
+          </button>
+        </div>
       )}
     </div>
   );
