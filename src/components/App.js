@@ -5,7 +5,7 @@ import Header from "./Header";
 
 const App = () => {
   const [games, setGames] = useState([]);
-  const [favoritedGame, setFavoritedGame] = useState(false);
+  const [favoritedGame, setFavoritedGame] = useState([]);
 
   useEffect(() => {
     fetch("/embed.json")
