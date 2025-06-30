@@ -3,6 +3,7 @@ import App from "./components/App";
 import Home from "./pages/Home";
 import FavoriteGames from "./pages/FavoriteGames";
 import SubmitGames from "./pages/SubmitGames";
+import ErrorPage from "./pages/ErrorPage";
 
 const routes = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ const routes = createBrowserRouter([
       { path: "/favorite-games", element: <FavoriteGames /> },
       { path: "/submit-game", element: <SubmitGames /> },
     ],
+    errorElement: <ErrorPage />,
   },
 ]);
 
