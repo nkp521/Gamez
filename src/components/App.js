@@ -14,8 +14,6 @@ const App = () => {
       });
   }, []);
 
-  console.log(games);
-
   return (
     <>
       <Header />
