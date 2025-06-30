@@ -1,9 +1,8 @@
 import React from "react";
-import "./App.css";
-import GameApp from "./components/GameApp";
+import Home from "../pages/Home";
 
 const App = () => {
-  return <GameApp />;
+  return <Home />;
 };
 
 export default App;
