@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { useOutletContext } from "react-router-dom";
 
 const CameCard = ({ game }) => {
   const { description, embed, image, title } = game;
+  const { showIframe, setShowIframe } = useOutletContext();
 
   const [showDescription, setShowDescription] = useState(false);
-  const [showIframe, setShowIframe] = useState(false);
   const [favoritedGame, setFavoritedGame] = useState(false);
 
   const toggleDescription = () => setShowDescription(!showDescription);

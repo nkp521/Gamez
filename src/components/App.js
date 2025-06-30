@@ -5,6 +5,7 @@ import Header from "./Header";
 
 const App = () => {
   const [games, setGames] = useState([]);
+  const [favoritedGame, setFavoritedGame] = useState(false);
 
   useEffect(() => {
     fetch("/embed.json")
@@ -17,7 +18,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <Outlet context={{ games }} />
+      <Outlet context={{ games, favoritedGame, setFavoritedGame }} />
     </>
   );
 };
