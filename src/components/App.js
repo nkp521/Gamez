@@ -8,7 +8,7 @@ const App = () => {
   const [favoritedGames, setFavoritedGames] = useState([]);
 
   useEffect(() => {
-    fetch("/embed.json")
+    fetch("http://localhost:3001/games")
       .then((res) => res.json())
       .then((data) => {
         setGames(data);
