@@ -5,7 +5,7 @@ import Header from "./Header";
 
 const App = () => {
   const gameUrl = "http://localhost:3001/games";
-  const favoriteUrl = "http://localhost:3001/favorites";
+  const favoriteUrl = "http://localhost:3001/favorites/";
   const [games, setGames] = useState([]);
   const [favoritedGames, setFavoritedGames] = useState([]);
 
