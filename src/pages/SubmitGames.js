@@ -4,13 +4,30 @@ const SubmitGames = () => {
       <div className="flex flex-col justify-between">
         <div className="space-y-2">
           <h2 className="text-4xl font-bold leading-tight lg:text-5xl">
-            Form Details
+            Submission Guide
+            <br />
           </h2>
           <div className="dark:text-gray-600 font-bold">
-            Detailed Submission Guide
+            <br />
+            Game Name: Add the Game Name
+            <br />
+            <br />
+            Game Link: Please use an HTML5 link such as the embeeded link in the
+            games{" "}
+            <a
+              href="https://www.onlinegames.io/t/embeddable-games-for-websites/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600"
+            >
+              here
+            </a>
+            <br />
+            <br />
+            Game Description: Please include a brief and detailed Game
+            Description
           </div>
         </div>
-        {/* <img src="assets/svg/doodle.svg" alt="" className="p-6 h-52 md:h-64" /> */}
       </div>
       <form noValidate="" className="space-y-6">
         <div>
@@ -25,7 +42,7 @@ const SubmitGames = () => {
           />
         </div>
         <div>
-          <label htmlFor="email" className="text-sm">
+          <label htmlFor="link" className="text-sm">
             Game Link
           </label>
           <input
