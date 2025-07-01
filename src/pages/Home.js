@@ -1,10 +1,12 @@
 import React from "react";
-import Header from "../components/Header";
+import { useOutletContext } from "react-router-dom";
 import GameCard from "../components/CameCard";
 
-const Home = ({ games }) => {
+const Home = () => {
+  const { games } = useOutletContext();
+
   const renderGames = () =>
-    games.map((game) => <GameCard key={game.title} game={game} />);
+    games.map((game) => <GameCard key={game.id} game={game} />);
 
   return (
     <div>

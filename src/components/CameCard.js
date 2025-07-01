@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { useOutletContext } from "react-router-dom";
 
 const CameCard = ({ game }) => {
-  const { description, embed, image, tags, title } = game;
+  const { description, embed, image, title, id } = game;
+  const { favoritedGames, handleFavorite } = useOutletContext();
+
   const [showDescription, setShowDescription] = useState(false);
   const [showIframe, setShowIframe] = useState(false);
 
@@ -10,6 +13,14 @@ const CameCard = ({ game }) => {
 
   return (
     <div className="w-[364px] border rounded p-4">
+      <p
+        className="cursor-pointer text-right w-fit ml-auto"
+        onClick={() => handleFavorite(game)}
+      >
+        {favoritedGames.some((favoritedGame) => favoritedGame.id === game.id)
+          ? "❤️"
+          : "♡"}
+      </p>
       <img
         src={image}
         alt={title}
