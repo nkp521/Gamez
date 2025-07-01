@@ -17,7 +17,9 @@ const CameCard = ({ game }) => {
         className="cursor-pointer text-right w-fit ml-auto"
         onClick={() => handleFavorite(game)}
       >
-        {favoritedGames.includes(game) ? "❤️" : "♡"}
+        {favoritedGames.some((favoritedGame) => favoritedGame.id === game.id)
+          ? "❤️"
+          : "♡"}
       </p>
       <img
         src={image}
