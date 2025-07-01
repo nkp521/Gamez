@@ -15,7 +15,7 @@ const CameCard = ({ game }) => {
     <>
       <div className="bg-white/10 backdrop-blur-md text-white rounded-2xl shadow-xl p-5 w-[350px] mx-auto flex flex-col items-center border border-white/20 hover:scale-105 transition-all duration-300">
         <p
-          className="w-full flex justify-end text-2xl mb-2 cursor-pointer"
+          className="w-full flex justify-end text-2xl mb-2 cursor-pointer text-slate-400"
           onClick={() => handleFavorite(game)}
         >
           {favoritedGames.some((favoritedGame) => favoritedGame.id === game.id)
@@ -50,21 +50,17 @@ const CameCard = ({ game }) => {
           </p>
         )}
       </div>
-      
+
       {showIframe && (
         <>
           <div
             className="fixed inset-0 bg-black z-[9998]"
             onClick={toggleGame}
           ></div>
-          
+
           <div className="fixed inset-0 z-[9999] bg-black">
             <div className="relative w-full h-full">
-              <iframe
-                src={embed}
-                className="w-full h-full"
-                allowFullScreen
-              />
+              <iframe src={embed} className="w-full h-full" allowFullScreen />
               <button
                 className="absolute top-4 right-4 bg-red-500 text-white text-sm px-4 py-2 rounded-md hover:bg-red-600 transition z-[10000]"
                 onClick={toggleGame}
