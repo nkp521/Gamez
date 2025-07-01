@@ -2,22 +2,45 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Search from "./Search";
 
-const Header = () => {
+const Header = ({ setSearchedGame }) => {
   return (
-    <nav className="bg-gray-800 p-4 text-white flex flex-col items-center">
-      <h1 className="text-2xl font-bold mb-2">NKP's Arcade</h1>
-      <div className="flex gap-6">
-        <NavLink to="/" className="hover:underline">
+    <nav className="backdrop-blur-lg bg-white/10 text-white shadow-lg px-6 py-4 flex flex-col items-center md:flex-row md:justify-between sticky top-0 z-50">
+      <h1 className="text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-4 md:mb-0">
+        NKP's Arcade
+      </h1>
+      <div className="flex justify-center gap-9 text-sm font-semibold uppercase tracking-wide">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive
+              ? "text-pink-400 underline underline-offset-4"
+              : "text-purple-400 hover:text-pink-500 transition"
+          }
+        >
           Home
         </NavLink>
-        <NavLink to="/favorite-games" className="hover:underline">
+        <NavLink
+          to="/favorite-games"
+          className={({ isActive }) =>
+            isActive
+              ? "text-pink-400 underline underline-offset-4"
+              : "text-purple-400 hover:text-pink-500 transition"
+          }
+        >
           Favorite Games
         </NavLink>
-        <NavLink to="/submit-game" className="hover:underline">
+        <NavLink
+          to="/submit-game"
+          className={({ isActive }) =>
+            isActive
+              ? "text-pink-400 underline underline-offset-4"
+              : "text-purple-400 hover:text-pink-500 transition"
+          }
+        >
           Submit Game
         </NavLink>
       </div>
-      <Search />
+      <Search setSearchedGame={setSearchedGame} />
     </nav>
   );
 };

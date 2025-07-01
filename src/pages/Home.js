@@ -3,10 +3,14 @@ import { useOutletContext } from "react-router-dom";
 import GameCard from "../components/CameCard";
 
 const Home = () => {
-  const { games } = useOutletContext();
+  const { games, searchedGame } = useOutletContext();
+
+  const filteredGames = games.filter((game) =>
+    game.title.toLowerCase().includes(searchedGame.toLowerCase())
+  );
 
   const renderGames = () =>
-    games.map((game) => <GameCard key={game.id} game={game} />);
+    filteredGames.map((game) => <GameCard key={game.id} game={game} />);
 
   return (
     <div>

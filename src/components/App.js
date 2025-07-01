@@ -63,7 +63,7 @@ const App = () => {
 
   return (
     <>
-      <Header />
+      <Header setSearchedGame={setSearchedGame} />
       <Outlet
         context={{
           games,
@@ -72,7 +72,6 @@ const App = () => {
           handleFavorite,
           handleNewGame,
           searchedGame,
-          setSearchedGame,
         }}
       />
     </>

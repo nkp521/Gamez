@@ -3,10 +3,14 @@ import { useOutletContext } from "react-router-dom";
 import GameCard from "../components/CameCard";
 
 const FavoriteGames = () => {
-  const { favoritedGames } = useOutletContext();
+  const { favoritedGames, searchedGame } = useOutletContext();
+
+  const filteredFavoriteGames = favoritedGames.filter((game) =>
+    game.title.toLowerCase().includes(searchedGame.toLowerCase())
+  );
 
   const renderFavoriteGames = () =>
-    favoritedGames.map((game) => <GameCard key={game.id} game={game} />);
+    filteredFavoriteGames.map((game) => <GameCard key={game.id} game={game} />);
 
   return (
     <div>
