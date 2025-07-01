@@ -32,7 +32,7 @@ const App = () => {
   };
 
   const removeFavoritedGame = (game) => {
-    fetch(`${favoriteUrl}/${game.id}`, {
+    fetch(`${favoriteUrl}${game.id}`, {
       method: "DELETE",
     }).then(() =>
       setFavoritedGames((unfavoritedGame) =>

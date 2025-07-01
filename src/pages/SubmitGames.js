@@ -3,7 +3,7 @@ import { useOutletContext } from "react-router-dom";
 
 const defaultValues = {
   title: "",
-  embeed: "",
+  embed: "",
   image: "",
   description: "",
 };
@@ -49,8 +49,8 @@ const SubmitGames = () => {
             </a>
             <br />
             <br />
-            Game Image: Please provide a Game Image Link (example:
-            https://www.xyz.com/games.jpeg)
+            Game Image: Please provide a Game Image Link <br />
+            (example: https://www.xyz.com/games.jpeg)
             <br />
             <br />
             <br />
@@ -65,8 +65,8 @@ const SubmitGames = () => {
             Game Name
           </label>
           <input
-            id="name"
-            value={formValues.name}
+            name="title"
+            value={formValues.title}
             onChange={handleChange}
             type="text"
             placeholder="Enter Game Name Here"
@@ -78,8 +78,8 @@ const SubmitGames = () => {
             Game Link
           </label>
           <input
-            id="link"
-            value={formValues.embeed}
+            name="embed"
+            value={formValues.embed}
             onChange={handleChange}
             type="link"
             placeholder="Enter HTML5 Link Here"
@@ -91,7 +91,7 @@ const SubmitGames = () => {
             Game Image
           </label>
           <input
-            id="image"
+            name="image"
             value={formValues.image}
             onChange={handleChange}
             type="link"
@@ -104,7 +104,7 @@ const SubmitGames = () => {
             Game Description
           </label>
           <textarea
-            id="message"
+            name="description"
             value={formValues.description}
             onChange={handleChange}
             rows="3"
