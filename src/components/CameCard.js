@@ -12,13 +12,13 @@ const CameCard = ({ game }) => {
   const toggleGame = () => setShowIframe(!showIframe);
 
   return (
-    <div className="w-[364px] border rounded p-4">
+    <div className="bg-white/10 backdrop-blur-md text-white rounded-2xl shadow-xl p-5 w-[350px] mx-auto flex flex-col items-center border border-white/20 hover:scale-105 transition-all duration-300">
       <p
         className="cursor-pointer text-right w-fit ml-auto"
         onClick={() => handleFavorite(game)}
       >
         {favoritedGames.some((favoritedGame) => favoritedGame.id === game.id)
-          ? "❤️"
+          ? "🩷"
           : "♡"}
       </p>
       <img

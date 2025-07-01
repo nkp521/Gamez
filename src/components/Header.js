@@ -8,12 +8,12 @@ const Header = ({ setSearchedGame }) => {
       <h1 className="text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-4 md:mb-0">
         NKP's Arcade
       </h1>
-      <div className="flex justify-center gap-9 text-sm font-semibold uppercase tracking-wide">
+      <div className="flex gap-10 text-xl font-extrabold tracking-wide">
         <NavLink
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "text-pink-400 underline underline-offset-4"
+              ? "font-extrabold text-pink-400 underline underline-offset-4"
               : "text-purple-400 hover:text-pink-500 transition"
           }
         >
@@ -23,7 +23,7 @@ const Header = ({ setSearchedGame }) => {
           to="/favorite-games"
           className={({ isActive }) =>
             isActive
-              ? "text-pink-400 underline underline-offset-4"
+              ? "font-extrabold text-pink-400 underline underline-offset-4"
               : "text-purple-400 hover:text-pink-500 transition"
           }
         >
@@ -33,7 +33,7 @@ const Header = ({ setSearchedGame }) => {
           to="/submit-game"
           className={({ isActive }) =>
             isActive
-              ? "text-pink-400 underline underline-offset-4"
+              ? "font-extrabold text-pink-400 underline underline-offset-4"
               : "text-purple-400 hover:text-pink-500 transition"
           }
         >

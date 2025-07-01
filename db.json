@@ -376,14 +376,6 @@
   ],
   "favorites": [
     {
-      "id": "2",
-      "title": "Kick the Pirate",
-      "embed": "https://cloud.onlinegames.io/games/2022/construct/92/kick-the-pirate/index-og.html",
-      "image": "https://www.onlinegames.io/media/posts/1012/responsive/Kick-The-Pirate-xs.jpg",
-      "tags": "1-player,2d,clicker,crazy,destroy,free,fun,funny,mobile,mouse,pirate,weapon",
-      "description": "Ahoy matey!  Pirates may be brave on the high seas, but they’ve never met you.  In Kick the Pirate, your job is simple: turn this grumpy pirate into your personal punching bag.   He’s muttering curses or just standing there looking smug."
-    },
-    {
       "id": "6",
       "title": "Pyramid Solitaire",
       "embed": "https://cloud.onlinegames.io/games/2025/html/solitaire/index-og.html#pyramid",
@@ -422,6 +414,14 @@
       "image": "https://www.onlinegames.io/media/posts/996/responsive/Monster-Truck-Race-Arena-xs.jpg",
       "tags": "1-player,2d,car,crazy,free,racing,truck",
       "description": "Love giant wheels?  You’re in for a treat.  Rev your engines in Monster Truck Race Arena, a 2D racing game where flipping your truck is the fastest way to lose!  Drive through rough off-road tracks, pull off stunts, and race head-to-head with other monster trucks."
+    },
+    {
+      "id": "2",
+      "title": "Kick the Pirate",
+      "embed": "https://cloud.onlinegames.io/games/2022/construct/92/kick-the-pirate/index-og.html",
+      "image": "https://www.onlinegames.io/media/posts/1012/responsive/Kick-The-Pirate-xs.jpg",
+      "tags": "1-player,2d,clicker,crazy,destroy,free,fun,funny,mobile,mouse,pirate,weapon",
+      "description": "Ahoy matey!  Pirates may be brave on the high seas, but they’ve never met you.  In Kick the Pirate, your job is simple: turn this grumpy pirate into your personal punching bag.   He’s muttering curses or just standing there looking smug."
     }
   ]
 }
