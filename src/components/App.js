@@ -46,6 +46,20 @@ const App = () => {
     alreadyFavorited ? removeFavoritedGame(game) : addFavoritedGame(game);
   };
 
+  const handleNewGame = (formValues) => {
+    fetch(gameUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formValues),
+    })
+      .then((res) => res.json())
+      .then((newGame) => {
+        setGames([...games, newGame]);
+      });
+  };
+
   return (
     <>
       <Header />
@@ -55,6 +69,7 @@ const App = () => {
           favoritedGames,
           setFavoritedGames,
           handleFavorite,
+          handleNewGame,
         }}
       />
     </>
