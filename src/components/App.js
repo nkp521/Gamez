@@ -8,6 +8,7 @@ const App = () => {
   const favoriteUrl = "http://localhost:3001/favorites/";
   const [games, setGames] = useState([]);
   const [favoritedGames, setFavoritedGames] = useState([]);
+  const [searchedGame, setSearchedGame] = useState("");
 
   useEffect(() => {
     fetch(gameUrl)
@@ -70,6 +71,8 @@ const App = () => {
           setFavoritedGames,
           handleFavorite,
           handleNewGame,
+          searchedGame,
+          setSearchedGame,
         }}
       />
     </>

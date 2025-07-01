@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Search from "./Search";
 
 const Header = () => {
   return (
@@ -16,6 +17,7 @@ const Header = () => {
           Submit Game
         </NavLink>
       </div>
+      <Search />
     </nav>
   );
 };
