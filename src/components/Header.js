@@ -5,15 +5,15 @@ import Search from "./Search";
 const Header = ({ setSearchedGame }) => {
   return (
     <nav className="backdrop-blur-lg bg-white/10 text-white shadow-lg px-6 py-4 flex flex-col items-center md:flex-row md:justify-between sticky top-0 z-50">
-      <h1 className="text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-4 md:mb-0">
+      <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-4 md:mb-0">
         NKP's Arcade
       </h1>
-      <div className="flex gap-10 text-xl font-extrabold tracking-wide">
+      <div className="flex gap-10 text-xl font-bold tracking-wide">
         <NavLink
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "font-extrabold text-pink-400 underline underline-offset-4"
+              ? "font-bold text-pink-400 underline underline-offset-4"
               : "text-purple-400 hover:text-pink-500 transition"
           }
         >
@@ -23,7 +23,7 @@ const Header = ({ setSearchedGame }) => {
           to="/favorite-games"
           className={({ isActive }) =>
             isActive
-              ? "font-extrabold text-pink-400 underline underline-offset-4"
+              ? "font-bold text-pink-400 underline underline-offset-4"
               : "text-purple-400 hover:text-pink-500 transition"
           }
         >
@@ -33,7 +33,7 @@ const Header = ({ setSearchedGame }) => {
           to="/submit-game"
           className={({ isActive }) =>
             isActive
-              ? "font-extrabold text-pink-400 underline underline-offset-4"
+              ? "font-bold text-pink-400 underline underline-offset-4"
               : "text-purple-400 hover:text-pink-500 transition"
           }
         >
