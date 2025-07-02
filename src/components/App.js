@@ -4,8 +4,8 @@ import Home from "../pages/Home";
 import Header from "./Header";
 
 const App = () => {
-  const gameUrl = "http://localhost:3001/games";
-  const favoriteUrl = "http://localhost:3001/favorites/";
+  const gameUrl = "https://games-api-2wkh.onrender.com/games/";
+  const favoriteUrl = "https://games-api-2wkh.onrender.com/favorites/";
   const [games, setGames] = useState([]);
   const [favoritedGames, setFavoritedGames] = useState([]);
   const [searchedGame, setSearchedGame] = useState("");
