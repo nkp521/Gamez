@@ -1,4 +1,4 @@
-# 𝘹️ NKP's Arcade – Online Game Arcade
+# 🎮 NKP's Arcade – Online Game Arcade
 
 A simple but stylish arcade hub showcasing a list of playable games.
 
