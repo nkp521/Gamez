@@ -2,3 +2,4 @@ public/embed.json
 node_modules/
 .cache/
 db.json
+.env

@@ -32,7 +32,6 @@ const App = () => {
         setFavoritedGames((favorites) => [...favorites, newGame])
       );
   };
-  console.log(games);
 
   const removeFavoritedGame = (game) => {
     fetch(`${favoriteUrl}${game.id}`, {

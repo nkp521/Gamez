@@ -19,7 +19,9 @@ const GameCard = ({ game }) => {
             className="text-2xl cursor-pointer text-slate-400 hover:text-pink-400 transition"
             onClick={() => handleFavorite(game)}
           >
-            {favoritedGames.some((favoritedGame) => favoritedGame.id === game.id)
+            {favoritedGames.some(
+              (favoritedGame) => favoritedGame.id === game.id
+            )
               ? "🩷"
               : "♡"}
           </p>
