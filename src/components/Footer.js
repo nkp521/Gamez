@@ -9,23 +9,14 @@ const Footer = () => (
     </div>
 
     <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-      <a
-        href="https://tailwindcss.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://tailwindcss.com/" target="_blank">
         <img
           src="https://tailwindcss.com/_next/static/media/tailwindcss-logotype.128b6e76.svg"
           alt="Tailwind CSS"
           className="h-4 inline"
         />
       </a>
-      <a
-        href="https://mambaui.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="ml-4"
-      >
+      <a href="https://mambaui.com/" target="_blank" className="ml-4">
         <img
           src="https://mambaui.com/images/logo.svg"
           alt="Mamba UI"

@@ -13,15 +13,17 @@ const GameCard = ({ game }) => {
 
   return (
     <>
-      <div className="self-start bg-white/10 backdrop-blur-md text-white rounded-2xl shadow-xl  p-4 w-[320px] mx-auto flex flex-col items-center border border-white/20 hover:scale-105 transition-all duration-300">
-        <p
-          className="w-full flex justify-end text-2xl mb-2 cursor-pointer text-slate-400"
-          onClick={() => handleFavorite(game)}
-        >
-          {favoritedGames.some((favoritedGame) => favoritedGame.id === game.id)
-            ? "🩷"
-            : "♡"}
-        </p>
+      <div className="self-start bg-white/10 backdrop-blur-md text-white rounded-2xl shadow-xl p-4 w-[320px] mx-auto flex flex-col items-center border border-white/20 hover:scale-105 transition-all duration-300">
+        <div className="w-full flex justify-end">
+          <p
+            className="text-2xl cursor-pointer text-slate-400 hover:text-pink-400 transition"
+            onClick={() => handleFavorite(game)}
+          >
+            {favoritedGames.some((favoritedGame) => favoritedGame.id === game.id)
+              ? "🩷"
+              : "♡"}
+          </p>
+        </div>
         <img
           src={image}
           alt={title}
@@ -32,7 +34,7 @@ const GameCard = ({ game }) => {
         </h2>
         <div className="flex flex-col gap-2 w-full">
           <button
-            className="bg-gradient-to-r from-pink-500 to-purple-500 text-white  py-1.5 rounded-md font-semibold hover:brightness-110 transition"
+            className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-1.5 rounded-md font-semibold hover:brightness-110 transition"
             onClick={toggleGame}
           >
             Play Game
