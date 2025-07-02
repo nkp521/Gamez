@@ -4,6 +4,7 @@
 
 button,
 h1,
-.nav-text {
+.nav-text,
+.footer-brand {
   font-family: "Press Start 2P", cursive;
 }
