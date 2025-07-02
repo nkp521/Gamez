@@ -8,6 +8,8 @@ A simple but stylish arcade hub showcasing a list of playable games.
 
 👉 [https://gamez-1cgq.onrender.com/](https://gamez-1cgq.onrender.com/)
 
+- Please allow 1-2 minutes for render to start the server
+
 ---
 
 ## 📂 GitHub Repos
