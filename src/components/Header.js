@@ -7,7 +7,7 @@ const Header = ({ setSearchedGame }) => {
   const submitGame = location.pathname === "/submit-game";
 
   return (
-    <nav className="backdrop-blur-lg bg-white/10 text-white shadow-lg px-6 py-4 flex flex-col items-center md:flex-row md:justify-between sticky top-0 z-50">
+    <nav className="backdrop-blur-lg bg-white/10 text-white shadow-lg px-6 py-4 flex flex-col md:flex-row items-center justify-between sticky top-0 z-50">
       <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-4 md:mb-0">
         NKP's Arcade
       </h1>
@@ -45,7 +45,9 @@ const Header = ({ setSearchedGame }) => {
           </NavLink>
         </div>
       </nav>
-      {!submitGame && <Search setSearchedGame={setSearchedGame} />}
+      <div className="w-[250px]">
+        {!submitGame && <Search setSearchedGame={setSearchedGame} />}
+      </div>
     </nav>
   );
 };
