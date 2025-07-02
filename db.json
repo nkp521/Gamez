@@ -374,54 +374,5 @@
       "description": "You have been given a special mission: to eliminate the men in suits! Secret Sniper Agent is a 2D shooting game in which you are a skilled sniper agent. You have a crucial task on the rooftop.\n\nYou must hunt down all the men with silenced guns who are moving left and right in the city park. Use your precise aiming skills and shoot them one by one in this action game! However, remember that you need to use your bullets wisely."
     }
   ],
-  "favorites": [
-    {
-      "id": "8",
-      "title": "Escape Car",
-      "embed": "https://cloud.onlinegames.io/games/2025/unity2/escape-car/index-og.html",
-      "image": "https://www.onlinegames.io/media/posts/1000/responsive/Escape-Car-xs.jpg",
-      "tags": "1-player,3d,car,crazy,drift,driving,free,gta,html5,mobile,police,skill,speed,traffic",
-      "description": "Do you remember the very first Grand Theft Auto?  That old-school, top-down chaos.  Think of that and give it a fresh coat of chunky 3D graphics.  Next, drop that straight in your browser."
-    },
-    {
-      "id": "9",
-      "title": "Kick the Alien",
-      "embed": "https://cloud.onlinegames.io/games/2021/4/kick-the-alien/index-og.html",
-      "image": "https://www.onlinegames.io/media/posts/997/responsive/Kick-the-Alien-xs.jpg",
-      "tags": "1-player,2d,clicker,crazy,destroy,free,fun,funny,mobile,mouse,physics",
-      "description": "Kick the Alien is a wacky clicker game where an evil alien has just arrived to colonize your planet.  And your job is to give a sneaky alien the pounding it deserves. \nEvery click you make sends the alien flying, earns you coins, and pushes you closer to the next level.  Use those coins to unlock wild weapons, new battlegrounds, and more."
-    },
-    {
-      "id": "10",
-      "title": "Monster Truck Race Arena",
-      "embed": "https://cloud.onlinegames.io/games/2021/3/monster-truck-race-arena/index-og.html",
-      "image": "https://www.onlinegames.io/media/posts/996/responsive/Monster-Truck-Race-Arena-xs.jpg",
-      "tags": "1-player,2d,car,crazy,free,racing,truck",
-      "description": "Love giant wheels?  You’re in for a treat.  Rev your engines in Monster Truck Race Arena, a 2D racing game where flipping your truck is the fastest way to lose!  Drive through rough off-road tracks, pull off stunts, and race head-to-head with other monster trucks."
-    },
-    {
-      "id": "5",
-      "title": "Solitaire",
-      "embed": "https://cloud.onlinegames.io/games/2025/html/solitaire/index-og.html",
-      "image": "https://www.onlinegames.io/media/posts/1007/responsive/solitaire-xs.jpg",
-      "tags": "1-player,2d,board,card,free,logic,mobile,mouse,solitaire",
-      "description": "\"Emma's afternoon hit a wall at exactly 3:17 PM.  Her inbox chimed again, another urgent task from her manager.  Minimized the spreadsheet and opened Solitaire on OnlineGames. io."
-    },
-    {
-      "id": "6",
-      "title": "Pyramid Solitaire",
-      "embed": "https://cloud.onlinegames.io/games/2025/html/solitaire/index-og.html#pyramid",
-      "image": "https://www.onlinegames.io/media/posts/1006/responsive/pyramid-Solitaire-xs.jpg",
-      "tags": "1-player,2d,board,card,free,logic,mobile,mouse,solitaire",
-      "description": "Pyramid Solitaire is a free online card game at OnlineGames. io.  In this calming card puzzle, you need to remove a pyramid of cards by selecting pairs that add up to 13.  It's a simple but fun game to learn."
-    },
-    {
-      "id": "2",
-      "title": "Kick the Pirate",
-      "embed": "https://cloud.onlinegames.io/games/2022/construct/92/kick-the-pirate/index-og.html",
-      "image": "https://www.onlinegames.io/media/posts/1012/responsive/Kick-The-Pirate-xs.jpg",
-      "tags": "1-player,2d,clicker,crazy,destroy,free,fun,funny,mobile,mouse,pirate,weapon",
-      "description": "Ahoy matey!  Pirates may be brave on the high seas, but they’ve never met you.  In Kick the Pirate, your job is simple: turn this grumpy pirate into your personal punching bag.   He’s muttering curses or just standing there looking smug."
-    }
-  ]
+  "favorites": []
 }

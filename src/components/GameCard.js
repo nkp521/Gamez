@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 
-const CameCard = ({ game }) => {
+const GameCard = ({ game }) => {
   const { description, embed, image, title, id } = game;
   const { favoritedGames, handleFavorite } = useOutletContext();
 
@@ -13,7 +13,7 @@ const CameCard = ({ game }) => {
 
   return (
     <>
-      <div className="bg-white/10 backdrop-blur-md text-white rounded-2xl shadow-xl p-5 w-[350px] mx-auto flex flex-col items-center border border-white/20 hover:scale-105 transition-all duration-300">
+      <div className="self-start bg-white/10 backdrop-blur-md text-white rounded-2xl shadow-xl p-5 w-[350px] mx-auto flex flex-col items-center border border-white/20 hover:scale-105 transition-all duration-300">
         <p
           className="w-full flex justify-end text-2xl mb-2 cursor-pointer text-slate-400"
           onClick={() => handleFavorite(game)}
@@ -45,7 +45,7 @@ const CameCard = ({ game }) => {
           </button>
         </div>
         {showDescription && (
-          <p className="mt-3 text-sm text-white/80 text-center">
+          <p className="mt-3 text-sm text-purple-500 text-center">
             {description}
           </p>
         )}
@@ -75,4 +75,4 @@ const CameCard = ({ game }) => {
   );
 };
 
-export default CameCard;
+export default GameCard;

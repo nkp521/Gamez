@@ -1,6 +1,6 @@
 import React from "react";
 import { useOutletContext } from "react-router-dom";
-import GameCard from "../components/CameCard";
+import GameCard from "../components/GameCard";
 
 const Home = () => {
   const { games, searchedGame } = useOutletContext();
@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div>
       <header>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 justify-items-center">
+        <div className="flex flex-wrap justify-center gap-4">
           {renderGames()}
         </div>
       </header>
