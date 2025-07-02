@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Home from "../pages/Home";
 import Header from "./Header";
+import Footer from "./Footer";
 
 const App = () => {
   const gameUrl = "https://games-api-2wkh.onrender.com/games/";
@@ -31,6 +32,7 @@ const App = () => {
         setFavoritedGames((favorites) => [...favorites, newGame])
       );
   };
+  console.log(games);
 
   const removeFavoritedGame = (game) => {
     fetch(`${favoriteUrl}${game.id}`, {
@@ -62,19 +64,24 @@ const App = () => {
   };
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Header setSearchedGame={setSearchedGame} />
-      <Outlet
-        context={{
-          games,
-          favoritedGames,
-          setFavoritedGames,
-          handleFavorite,
-          handleNewGame,
-          searchedGame,
-        }}
-      />
-    </>
+
+      <main className="flex-grow">
+        <Outlet
+          context={{
+            games,
+            favoritedGames,
+            setFavoritedGames,
+            handleFavorite,
+            handleNewGame,
+            searchedGame,
+          }}
+        />
+      </main>
+
+      <Footer />
+    </div>
   );
 };
 
