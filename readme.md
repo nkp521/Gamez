@@ -8,7 +8,7 @@ A simple but stylish arcade hub showcasing a list of playable games.
 
 👉 [https://gamez-1cgq.onrender.com/](https://gamez-1cgq.onrender.com/)
 
-- Please allow 1-2 minutes for render to start the server
+- Please allow 1-2 minutes for render to start the back-end server
 
 ---
 
@@ -42,18 +42,16 @@ Both frontend and backend are hosted on **Render**:
 ## 👨🏽‍💻 Run It Locally
 
 ```bash
-# Clone the repos
+# Clone the repo
 git clone https://github.com/nkp521/Gamez
-git clone https://github.com/nkp521/games-api
+cd Gamez
 
-# Start backend first
-cd games-api
+# Start local JSON server
 json-server --watch db.json --port 3001
 
-# Start frontend
-cd ../Gamez
+# In a new terminal, start the frontend
 npm install
-npm run dev
+npm start
 ```
 
 ### 🚨 Update URLs
