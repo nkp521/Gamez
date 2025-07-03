@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 
 const GameCard = ({ game }) => {
-  const { description, embed, image, title, id } = game;
+  const { description, embed, image, title } = game;
   const { favoritedGames, handleFavorite } = useOutletContext();
 
   const [showDescription, setShowDescription] = useState(false);
