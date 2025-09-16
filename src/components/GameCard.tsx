@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 
-const GameCard = ({ game }) => {
+const GameCard = ({ game }: { game: any }) => {
   const { description, embed, image, title } = game;
-  const { favoritedGames, handleFavorite } = useOutletContext();
+  const { favoritedGames, handleFavorite } = useOutletContext<any>();
 
   const [showDescription, setShowDescription] = useState(false);
   const [showIframe, setShowIframe] = useState(false);
@@ -20,7 +20,7 @@ const GameCard = ({ game }) => {
             onClick={() => handleFavorite(game)}
           >
             {favoritedGames.some(
-              (favoritedGame) => favoritedGame.id === game.id
+              (favoritedGame: any) => favoritedGame.id === game.id
             )
               ? "🩷"
               : "♡"}
