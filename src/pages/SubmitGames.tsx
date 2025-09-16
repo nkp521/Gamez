@@ -11,13 +11,13 @@ const defaultValues = {
 const SubmitGames = () => {
   const [formValues, setFormValues] = useState(defaultValues);
 
-  const { handleNewGame } = useOutletContext();
+  const { handleNewGame } = useOutletContext<any>();
 
-  const handleChange = ({ target: { name, value } }) => {
+  const handleChange = ({ target: { name, value } }: { target: { name: string; value: string } }) => {
     setFormValues({ ...formValues, [name]: value });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: any) => {
     event.preventDefault();
 
     handleNewGame(formValues);
@@ -115,7 +115,7 @@ const SubmitGames = () => {
                   name="description"
                   value={formValues.description}
                   onChange={handleChange}
-                  rows="3"
+                  rows={3}
                   placeholder="Enter Game Description Here"
                   className="w-full p-3 rounded-lg bg-white border border-purple-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100 ="
                 ></textarea>
