@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import Search from "./Search";
 
-const Header = ({ setSearchedGame }) => {
+const Header = ({ setSearchedGame }: { setSearchedGame: (value: string) => void }) => {
   const location = useLocation();
   const submitGame = location.pathname === "/submit-game";
 
