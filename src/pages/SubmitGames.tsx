@@ -117,7 +117,7 @@ const SubmitGames = () => {
                   onChange={handleChange}
                   rows={3}
                   placeholder="Enter Game Description Here"
-                  className="w-full p-3 rounded-lg bg-white border border-purple-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100 ="
+                  className="w-full p-3 rounded-lg bg-white border border-purple-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100"
                 ></textarea>
               </div>
 
