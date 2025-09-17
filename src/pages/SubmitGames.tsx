@@ -10,7 +10,7 @@ type FormValues = {
 };
 
 const SubmitGames = () => {
-  const { handleNewGame } = useOutletContext<any>();
+  const { handleNewGame, games } = useOutletContext<any>();
   const { register, handleSubmit, reset, formState: { errors } } = useForm<FormValues>()
 
   const urlPattern = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)$/;
@@ -66,7 +66,7 @@ const SubmitGames = () => {
                   Game Name
                 </label>
                 <input
-                  {...register("title", { required: {value: true, message: "Title is required"}})}
+                  {...register("title", { required: {value: true, message: "Title is required"} })}
                   type="text"
                   placeholder="Enter Game Name Here"
                   className="w-full p-3 rounded-lg bg-white border border-purple-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100"
@@ -84,6 +84,12 @@ const SubmitGames = () => {
                     pattern: {
                       value: urlPattern,
                       message: "Enter a valid URL"
+                    },
+                    validate: (fieldValue: string) => {
+                      const duplicateGame = games.some((game: any) => 
+                        game.embed === fieldValue
+                      );
+                      return duplicateGame ? "Game already exists" : undefined;
                     }
                   })}
                   type="url"
