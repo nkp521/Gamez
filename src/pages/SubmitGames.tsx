@@ -11,7 +11,14 @@ type FormValues = {
 
 const SubmitGames = () => {
   const { handleNewGame, games } = useOutletContext<any>();
-  const { register, handleSubmit, reset, formState: { errors } } = useForm<FormValues>()
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<FormValues>({
+    defaultValues: {
+      title: "",
+      embed: "",
+      image: "",
+      description: ""
+    }
+  })
 
   const urlPattern = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)$/;
 
