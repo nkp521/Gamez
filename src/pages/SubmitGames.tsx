@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { useOutletContext } from "react-router-dom";
 import { useForm } from 'react-hook-form'
-
 
 type FormValues = {
   title: string,
@@ -12,8 +11,9 @@ type FormValues = {
 
 const SubmitGames = () => {
   const { handleNewGame } = useOutletContext<any>();
-  const form = useForm<FormValues>()
-  const { register, control, handleSubmit, reset } = form
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<FormValues>()
+
+  const urlPattern = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)$/;
 
   const onSubmit = (data: FormValues) => {
     handleNewGame(data);
@@ -66,11 +66,12 @@ const SubmitGames = () => {
                   Game Name
                 </label>
                 <input
-                  {...register("title", { required: "Title is required"})}
+                  {...register("title", { required: {value: true, message: "Title is required"}})}
                   type="text"
                   placeholder="Enter Game Name Here"
                   className="w-full p-3 rounded-lg bg-white border border-purple-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100"
                 />
+                <p className="text-red-500 text-sm mt-1">{errors.title?.message}</p>
               </div>
 
               <div>
@@ -78,11 +79,18 @@ const SubmitGames = () => {
                   Game Link
                 </label>
                 <input
-                  {...register("embed", { required: {value: true, message: "Game link is required"}})}
+                  {...register("embed", { 
+                    required: "Game link is required",
+                    pattern: {
+                      value: urlPattern,
+                      message: "Enter a valid URL"
+                    }
+                  })}
                   type="url"
                   placeholder="Enter HTML5 Link Here"
                   className="w-full p-3 rounded-lg bg-white border border-purple-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100"
                 />
+                <p className="text-red-500 text-sm mt-1">{errors.embed?.message}</p>
               </div>
 
               <div>
@@ -90,11 +98,18 @@ const SubmitGames = () => {
                   Game Image
                 </label>
                 <input
-                  {...register("image", { required: {value: true, message: "Image link is required"}})}
+                  {...register("image", { 
+                    required: "Image link is required",
+                    pattern: {
+                      value: urlPattern,
+                      message: "Enter a valid URL"
+                    }
+                  })}
                   type="url"
                   placeholder="Enter Image Link Here"
                   className="w-full p-3 rounded-lg bg-white border border-purple-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100"
                 />
+                <p className="text-red-500 text-sm mt-1">{errors.image?.message}</p>
               </div>
 
               <div>
@@ -107,6 +122,7 @@ const SubmitGames = () => {
                   placeholder="Enter Game Description Here"
                   className="w-full p-3 rounded-lg bg-white border border-purple-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100"
                 ></textarea>
+                <p className="text-red-500 text-sm mt-1">{errors.description?.message}</p>
               </div>
 
               <button
