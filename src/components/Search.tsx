@@ -1,19 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
+import { useForm } from 'react-hook-form'
 
 const SearchBar = ({ setSearchedGame }: { setSearchedGame: (value: string) => void }) => {
-  const [searchValue, setSearchValue] = useState("");
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchValue(event.target.value);
-    setSearchedGame(event.target.value);
-  };
+  const { register } = useForm()
 
   return (
     <input
+      {...register("search", {
+        onChange: (e) => setSearchedGame(e.target.value)
+      })}
       type="text"
       placeholder="Search games..."
-      value={searchValue}
-      onChange={handleChange}
       className="w-full max-w-xs px-3 py-1.5 text-sm text-gray-900 placeholder-gray-500 bg-white border rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200"
     />
   );
