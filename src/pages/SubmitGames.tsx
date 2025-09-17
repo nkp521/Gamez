@@ -11,7 +11,7 @@ type FormValues = {
 
 const SubmitGames = () => {
   const { handleNewGame, games } = useOutletContext<any>();
-  const { register, handleSubmit, reset, formState: { errors, isDirty, isValid, isSubmitting, isSubmitted, isSubmitSuccessful } } = useForm<FormValues>({
+  const { register, handleSubmit, reset, formState: { errors, isDirty, isValid, isSubmitting, isSubmitSuccessful } } = useForm<FormValues>({
     defaultValues: {
       title: "",
       embed: "",
@@ -30,6 +30,7 @@ const SubmitGames = () => {
   return (
     <div className="min-h-screen bg-white p-8">
       <div className="max-w-4xl mx-auto">
+        {isSubmitSuccessful && <p className="text-green-500">Game submitted successfully!</p>}
         <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-xl p-8 border border-purple-200">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="space-y-4">
