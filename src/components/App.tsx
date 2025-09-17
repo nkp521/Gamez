@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import Home from "../pages/Home";
 import Header from "./Header";
 import Footer from "./Footer";
 
 const App = () => {
   const gameUrl = "https://games-api-2wkh.onrender.com/games/";
   const favoriteUrl = "https://games-api-2wkh.onrender.com/favorites/";
-  const [games, setGames] = useState([]);
-  const [favoritedGames, setFavoritedGames] = useState([]);
+  const [games, setGames] = useState<any[]>([]);
+  const [favoritedGames, setFavoritedGames] = useState<any[]>([]);
   const [searchedGame, setSearchedGame] = useState("");
 
   useEffect(() => {
@@ -19,7 +18,7 @@ const App = () => {
       });
   }, []);
 
-  const addFavoritedGame = (game) => {
+  const addFavoritedGame = (game: any) => {
     fetch(favoriteUrl, {
       method: "POST",
       headers: {
@@ -33,7 +32,7 @@ const App = () => {
       );
   };
 
-  const removeFavoritedGame = (game) => {
+  const removeFavoritedGame = (game: any) => {
     fetch(`${favoriteUrl}${game.id}`, {
       method: "DELETE",
     }).then(() =>
@@ -43,12 +42,12 @@ const App = () => {
     );
   };
 
-  const handleFavorite = (game) => {
+  const handleFavorite = (game: any) => {
     const alreadyFavorited = favoritedGames.some((g) => g.id === game.id);
     alreadyFavorited ? removeFavoritedGame(game) : addFavoritedGame(game);
   };
 
-  const handleNewGame = (formValues) => {
+  const handleNewGame = (formValues: any) => {
     fetch(gameUrl, {
       method: "POST",
       headers: {

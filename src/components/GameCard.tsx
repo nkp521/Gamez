@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 
-const GameCard = ({ game }) => {
+const GameCard = ({ game }: { game: any }) => {
   const { description, embed, image, title } = game;
-  const { favoritedGames, handleFavorite } = useOutletContext();
+  const { favoritedGames, handleFavorite } = useOutletContext<any>();
 
   const [showDescription, setShowDescription] = useState(false);
   const [showIframe, setShowIframe] = useState(false);
@@ -20,7 +20,7 @@ const GameCard = ({ game }) => {
             onClick={() => handleFavorite(game)}
           >
             {favoritedGames.some(
-              (favoritedGame) => favoritedGame.id === game.id
+              (favoritedGame: any) => favoritedGame.id === game.id
             )
               ? "🩷"
               : "♡"}
@@ -64,7 +64,7 @@ const GameCard = ({ game }) => {
 
           <div className="fixed inset-0 z-[9999] bg-black">
             <div className="relative w-full h-full">
-              <iframe src={embed} className="w-full h-full" allowFullScreen />
+              <iframe src={embed} className="w-full h-full" allowFullScreen title="Game" />
               <button
                 className="absolute top-4 right-4 bg-red-500 text-white text-sm px-4 py-1.5 rounded-md hover:bg-red-600 transition z-[10000]"
                 onClick={toggleGame}

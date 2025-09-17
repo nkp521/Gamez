@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-const SearchBar = ({ setSearchedGame }) => {
+const SearchBar = ({ setSearchedGame }: { setSearchedGame: (value: string) => void }) => {
   const [searchValue, setSearchValue] = useState("");
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(event.target.value);
     setSearchedGame(event.target.value);
   };

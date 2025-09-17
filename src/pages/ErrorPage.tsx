@@ -7,13 +7,13 @@ const ErrorPage = () => {
 
   return (
     <>
-      <Header />
+      <Header setSearchedGame={() => {}} />
       <div className="text-center p-10">
         <h1 className="text-8xl font-bold ">🚨</h1>
         <br />
         <p className="text-lg">Nothing to see here. Go back to the Arcade</p>
         <br />
-        <p>{error.message || error.statusText}</p>
+        <p>{(error as any).message || (error as any).statusText}</p>
       </div>
     </>
   );
