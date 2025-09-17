@@ -1,28 +1,24 @@
 import React, { useState } from "react";
 import { useOutletContext } from "react-router-dom";
+import { useForm } from 'react-hook-form'
 
-const defaultValues = {
-  title: "",
-  embed: "",
-  image: "",
-  description: "",
+
+type FormValues = {
+  title: string,
+  embed: string
+  image: string,
+  description: string
 };
 
 const SubmitGames = () => {
-  const [formValues, setFormValues] = useState(defaultValues);
-
   const { handleNewGame } = useOutletContext<any>();
+  const form = useForm<FormValues>()
+  const { register, control, handleSubmit, reset } = form
 
-  const handleChange = ({ target: { name, value } }: { target: { name: string; value: string } }) => {
-    setFormValues({ ...formValues, [name]: value });
-  };
-
-  const handleSubmit = (event: any) => {
-    event.preventDefault();
-
-    handleNewGame(formValues);
-    setFormValues(defaultValues);
-  };
+  const onSubmit = (data: FormValues) => {
+    handleNewGame(data);
+    reset();
+  }
 
   return (
     <div className="min-h-screen bg-white p-8">
@@ -64,15 +60,13 @@ const SubmitGames = () => {
               </div>
             </div>
 
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
               <div>
                 <label className="block text-sm font-semibold mb-2 text-purple-700">
                   Game Name
                 </label>
                 <input
-                  name="title"
-                  value={formValues.title}
-                  onChange={handleChange}
+                  {...register("title", { required: "Title is required"})}
                   type="text"
                   placeholder="Enter Game Name Here"
                   className="w-full p-3 rounded-lg bg-white border border-purple-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100"
@@ -84,9 +78,7 @@ const SubmitGames = () => {
                   Game Link
                 </label>
                 <input
-                  name="embed"
-                  value={formValues.embed}
-                  onChange={handleChange}
+                  {...register("embed", { required: {value: true, message: "Game link is required"}})}
                   type="url"
                   placeholder="Enter HTML5 Link Here"
                   className="w-full p-3 rounded-lg bg-white border border-purple-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100"
@@ -98,9 +90,7 @@ const SubmitGames = () => {
                   Game Image
                 </label>
                 <input
-                  name="image"
-                  value={formValues.image}
-                  onChange={handleChange}
+                  {...register("image", { required: {value: true, message: "Image link is required"}})}
                   type="url"
                   placeholder="Enter Image Link Here"
                   className="w-full p-3 rounded-lg bg-white border border-purple-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100"
@@ -112,9 +102,7 @@ const SubmitGames = () => {
                   Game Description
                 </label>
                 <textarea
-                  name="description"
-                  value={formValues.description}
-                  onChange={handleChange}
+                  {...register("description", { required: {value: true, message: "Description is required"}})}
                   rows={3}
                   placeholder="Enter Game Description Here"
                   className="w-full p-3 rounded-lg bg-white border border-purple-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100"
