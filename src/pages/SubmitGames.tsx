@@ -11,7 +11,7 @@ type FormValues = {
 
 const SubmitGames = () => {
   const { handleNewGame, games } = useOutletContext<any>();
-  const { register, handleSubmit, reset, formState: { errors } } = useForm<FormValues>({
+  const { register, handleSubmit, reset, formState: { errors, isDirty, isValid } } = useForm<FormValues>({
     defaultValues: {
       title: "",
       embed: "",
@@ -139,6 +139,7 @@ const SubmitGames = () => {
               </div>
 
               <button
+                disabled={!isDirty || !isValid}
                 type="submit"
                 className="w-full p-3 text-white font-semibold rounded-lg bg-gradient-to-r from-pink-500 to-purple-500 hover:brightness-110 transition shadow-lg"
               >
